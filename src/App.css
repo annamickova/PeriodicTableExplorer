@@ -33,6 +33,26 @@
   }
 }
 
+@media (max-width: 768px) {
+  .detail-card {
+    padding: 1.25rem;
+  }
+
+  .element-title {
+    font-size: 1.25rem;
+  }
+
+  .close-button {
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 1.25rem;
+  }
+}
+
+a{
+  color: #66959d;
+  font-weight: bold;
+}
 .card {
   padding: 2em;
 }
@@ -43,13 +63,116 @@
 header{
   padding: 1.25rem;
   text-align: center;
-  color: #315098;
+  color: #355660;
 }
 
 body {
-  background-color: white;
+  background-color: black;
 }
 
-h1{
 
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+  color: white;
+}
+
+.table-grid {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 4px;
+  border: 2px solid gray;
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cell {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 1px solid black;
+}
+
+.filled {
+  background-color: #355660;
+}
+.detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.detail-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1a1a1a;
+}
+
+.element-title {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: black;
+}
+
+h3{
+  color: black;
+  font-weight: bold;
+}
+p{
+  color: black;
+}
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 12px;
+  margin: 1rem auto;
+  display: block;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.cell.highlight {
+  background-color: #ffe082;
+  border: 1px solid #fbc02d;
+  color: #000;
+  font-weight: bold;
+}
+
